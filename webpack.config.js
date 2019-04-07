@@ -28,8 +28,9 @@ module.exports = {
                 },
                 // 必要な polyfill を自動で入れてくれるモード
                 // see: https://qiita.com/shisama/items/88080011bbc69e3e620b
-                // yarn add --dev core-js が必要！
+                // yarn add core-js が必要！
                 useBuiltIns: 'usage',
+                corejs: 3,
                 // Tree Shaking を有効にするのに必要
                 // https://qiita.com/soarflat/items/755bbbcd6eb81bd128c4
                 modules: false,
