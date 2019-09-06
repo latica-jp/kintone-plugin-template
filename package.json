@@ -4,7 +4,7 @@
   "scripts": {
     "start": "node scripts/npm-start.js",
     "prepare": "node scripts/checkKeyFile.js",
-    "upload": "env-cmd ./.env kintone-plugin-uploader dist/plugin.zip --watch --waiting-dialog-ms 3000",
+    "upload": "env-cmd kintone-plugin-uploader dist/plugin.zip --watch --waiting-dialog-ms 3000",
     "develop": "npm run build -- --mode development",
     "release": "npm run build -- --mode production",
     "build": "webpack --bail"
