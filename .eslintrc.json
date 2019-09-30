@@ -7,7 +7,6 @@
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:node/recommended",
     "plugin:promise/recommended",
     "plugin:prettier/recommended"
   ],
@@ -38,7 +37,6 @@
           "error"
         ]
       }
-    ],
-    "node/no-unpublished-require": "off"
+    ]
   }
 }
