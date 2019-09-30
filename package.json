@@ -29,6 +29,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "npm-run": "^5.0.1",
     "npm-run-all": "^4.1.5",
+    "os-locale": "^4.0.0",
     "prettier": "^1.18.2",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",

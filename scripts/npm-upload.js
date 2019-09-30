@@ -1,6 +1,8 @@
 ;(async () => {
   const { existsSync } = require('fs')
-  const npmRun = require('npm-run')
+  const osLocale = require('os-locale')
+  const { run } = require('@kintone/plugin-uploader/dist')
+  const { getDefaultLang } = require('@kintone/plugin-uploader/dist/lang')
 
   const { pluginZipFilePath } = require('../webpack-utils')
   const { waitForFileCreateOrUpdate } = require('./utils')
@@ -25,14 +27,12 @@
   }
 
   const env = require('dotenv').config().parsed
-  const uploadArgs = [
+  const options = { lang: getDefaultLang(osLocale.sync()), watch: isWatchMode }
+  run(
+    env.KINTONE_DOMAIN,
+    env.KINTONE_USERNAME,
+    env.KINTONE_PASSWORD,
     pluginZipFilePath,
-    `--domain ${env.KINTONE_DOMAIN}`,
-    `--username ${env.KINTONE_USERNAME}`,
-    `--password ${env.KINTONE_PASSWORD}`,
-    '--waiting-dialog-ms 5000',
-    ...args,
-  ]
-  const ps = npmRun.exec(`kintone-plugin-uploader ${uploadArgs.join(' ')}`)
-  ps.stdout.pipe(process.stdout)
+    options
+  )
 })()
