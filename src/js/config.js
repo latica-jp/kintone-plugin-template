@@ -12,7 +12,7 @@ const config = kintone.plugin.app.getConfig(PLUGIN_ID)
 if (config.message) {
   $message.val(config.message)
 }
-$form.on('submit', e => {
+$form.on('submit', (e) => {
   e.preventDefault()
   kintone.plugin.app.setConfig({ message: $message.val() }, () => {
     alert('Please update the app!')

@@ -16,7 +16,7 @@ runAll(['upload -- --watch', 'build -- --watch'], {
   parallel: true,
   stdout: process.stdout,
   stdin: process.stdin,
-}).catch(error => {
+}).catch((error) => {
   const { results } = error
   if (results) {
     results

@@ -1,6 +1,6 @@
 const chokidar = require('chokidar')
 
-exports.waitForFileCreateOrUpdate = async path => {
+exports.waitForFileCreateOrUpdate = async (path) => {
   return new Promise((resolve, reject) => {
     const watcher = chokidar.watch(path)
     console.info(`Watching ${path}...`)
@@ -8,7 +8,7 @@ exports.waitForFileCreateOrUpdate = async path => {
       watcher.close()
       reject(new Error('Plugin zip file not created.'))
     }, 30000)
-    const success = message => {
+    const success = (message) => {
       watcher.close()
       clearTimeout(timeoutId)
       resolve(message)
