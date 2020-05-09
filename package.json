@@ -1,0 +1,44 @@
+{
+  "name": "kintone-plugin-template",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node scripts/npm-start.js",
+    "prepare": "node scripts/checkKeyFile.js",
+    "upload": "node scripts/npm-upload.js",
+    "u": "kintone-plugin-uploader ./dist/kintone-plugin-template-1.zip --domain latica.cybozu.com --username latica.jp@gmail.com --pass jf990jfF",
+    "build": "webpack  --bail --config webpack.dev.js",
+    "release": "webpack  --bail --config webpack.prod.js",
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx --fix ."
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "@kintone/plugin-packer": "^3.0.2",
+    "@kintone/plugin-uploader": "4.0.2",
+    "@kintone/webpack-plugin-kintone-plugin": "^4.0.1",
+    "babel-loader": "^8.1.0",
+    "chokidar": "^3.3.1",
+    "dotenv": "^8.2.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "npm-run": "^5.0.1",
+    "npm-run-all": "^4.1.5",
+    "os-locale": "^5.0.0",
+    "prettier": "^2.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "jquery": "^3.5.0"
+  }
+}
